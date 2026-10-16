@@ -1,0 +1,4 @@
+fonttools == 4.58.1
+fontmake == 3.10.0
+ufo-extractor == 0.8.1
+setuptools == 80.10.2

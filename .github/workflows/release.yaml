@@ -1,0 +1,30 @@
+name: Release
+
+on:
+  push:
+    tags: ["*"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.14'
+          cache: 'pip'
+      - name: Build font
+        run: |
+          pip install -r requirements.txt
+          CI=1 make font
+      - uses: xu-cheng/texlive-action@v3
+        with:
+          scheme: full
+          run: |
+            latexmk -lualatex slide
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            slide.pdf

@@ -1,0 +1,19 @@
+{
+  "editor.fontFamily": "SF Mono, Menlo, BabelStone Han Basic, BabelStone Han Extra, monospace",
+  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.latex.build.forceRecipeUsage": true,
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "make",
+      "tools": ["make"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "make",
+      "command": "make",
+      "args": ["all"]
+    }
+  ],
+  "editor.defaultFormatter": "James-Yu.latex-workshop",
+}

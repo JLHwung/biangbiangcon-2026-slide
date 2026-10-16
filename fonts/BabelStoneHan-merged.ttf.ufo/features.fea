@@ -1,0 +1,28 @@
+table GDEF {
+    GlyphClassDef [], [], [], [];
+} GDEF;
+
+
+lookup LigatureSubstitution1 {
+    lookupflag 0;
+    ;
+    sub uni2FF0 uni53E3 uni2FF8 uni6237 uni79BE by uniE17E;
+    sub uni2FF0 uni97F3 uni91D1 by uniE17F;
+    sub uni2FF0 uni6728 uni6CF4 by uniEB58;
+    sub uni2FF0 uni6C35 uni7FE5 by uniEB59;
+    sub uni2FF0 uni7F8A uni96B9 by uniF7BC;
+    sub uni2FF0 uni793B uni5BFA by uniEB5D;
+    sub uni2FF0 uni571F uni9ECE by uniEFB2;
+    sub uni2FF1 uni91D1 uni5750 by uniEDC8;
+    sub uni2FF1 uni9802 uni571F by uniEB4C;
+    sub uni2FF1 uni5774 uni706B by uniEB4E;
+    sub uni2FF1 uni99AE uni6728 by uniF6D2;
+    sub uni2FFA uni662F uni706B by uniEADF;
+} LigatureSubstitution1;
+
+feature liga {
+    script DFLT;
+    language dflt;
+            lookup LigatureSubstitution1;
+
+} liga;
